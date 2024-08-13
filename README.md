@@ -1,7 +1,1 @@
-<div align="center">
-
-# STUDY ALGORITHMS THROUGH DYNO VISUALIZER
-
-</div>
-
-## Live Demo: https://tuannguyen2504.github.io/dyno-visualizer/
+## Live Demo: https://learning-sort.vercel.app/
