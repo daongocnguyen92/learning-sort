@@ -1,0 +1,124 @@
+#aboutMe h1 {
+  min-width: 80vw;
+  text-align: center;
+  font-size: 5.4rem;
+  font-weight: bold;
+  color: var(--title-color);
+  transition: all 2.2s ease-in-out;
+}
+#aboutMe h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--secondary-color);
+  font-weight: 900;
+  margin-top: 16px;
+}
+
+.contact-info li {
+  font-size: 2.8rem;
+  padding: 0.8rem 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.contact-info li:hover, .contact-info li:active {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+.logo-ani {
+  -webkit-animation: logoAni 2.6s ease-in-out forwards;
+  animation: logoAni 2.6s ease-in-out forwards;
+}
+
+@-webkit-keyframes logoAni {
+  0% {
+    transform: translateY(-10px);
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  85% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes logoAni {
+  0% {
+    transform: translateY(-10px);
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  85% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 576px) {
+  #aboutMe h1 {
+    font-size: 3.6rem;
+  }
+  #aboutMe h3 {
+    font-size: 1.8rem;
+  }
+
+  .logo-ani {
+    max-width: 152px;
+    max-height: 152px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

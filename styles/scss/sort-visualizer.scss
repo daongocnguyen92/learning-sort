@@ -1,0 +1,244 @@
+@import './mixin.scss';
+
+nav {
+  z-index: 2 !important;
+}
+
+#sortControl {
+  padding: 1.4rem 1.6rem;
+  background-color: var(--header-bg-color);
+  flex-wrap: wrap;
+  border-bottom: solid 1px var(--secondary-color);
+}
+
+.sort-input {
+  margin: 6px 0;
+  flex-wrap: wrap;
+  &-item {
+    margin: 2px 8px;
+
+    label {
+      display: inline-block;
+      margin-right: 4px;
+      margin-bottom: 2px;
+
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--label-color);
+    }
+
+    input,
+    select {
+      padding: 6px 8px;
+      outline: none;
+      font-size: 1.4rem;
+
+      border: solid 1px var(--primary-color);
+      border-radius: 4px;
+
+      color: var(--label-color);
+      background: transparent;
+    }
+
+    select option {
+      background-color: var(--header-bg-color);
+      opacity: 0.95;
+      padding: 4px 0;
+    }
+
+    select:focus > option:checked {
+      background-color: var(--primary-color);
+      color: var(--light-grey);
+    }
+  }
+}
+
+.sort-btn {
+  flex-wrap: wrap;
+
+  &-item {
+    margin: 2px 4px;
+    background: transparent;
+    border: solid 1px var(--primary-color);
+    color: var(--text-color);
+
+    padding: 1rem 1.4rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+
+    @include transition;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: var(--secondary-color);
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+.visual-sort {
+  width: 100vw;
+  padding: 8px;
+}
+
+#graph {
+  border-bottom: solid 8px #111;
+  align-items: flex-end;
+}
+
+.arr-item {
+  width: 100%;
+  background-color: #393a59;
+  text-align: center;
+  color: #fff;
+}
+
+#hideControlBtn {
+  margin: 0.4rem;
+  top: 18px;
+  right: 26px;
+  font-size: 2rem;
+  color: var(--primary-color);
+  @include transition;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+#sortNote {
+  padding: 8px;
+}
+
+.sort-note-item {
+  margin: 2px 16px;
+  &__title {
+    font-size: 1.8rem;
+    color: var(--label-color);
+    letter-spacing: 1px;
+  }
+
+  &__color {
+    height: 2rem;
+    width: 4rem;
+    margin-left: 4px;
+  }
+}
+
+#sortAnalysis {
+  display: none;
+}
+
+.sort-analysis-item {
+  font-size: 1.8rem;
+  color: var(--title-color);
+  margin: 2px 8px;
+
+  span {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--label-color);
+    margin-left: 4px;
+  }
+}
+
+// description algorithm modal
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: 0.4;
+  z-index: 4;
+  display: none;
+}
+
+.desc-alg-modal {
+  padding: 3.6rem;
+  width: 100%;
+  &-wrap {
+    display: none;
+    background-color: var(--body-bg-color);
+    z-index: 99;
+    max-height: 90vh;
+    min-width: 65vw;
+    max-width: 95vw;
+
+    overflow: auto;
+    box-shadow: 0px 0px 5px 4px rgba(#e5e5e5, 0.1);
+    border-radius: 4px;
+    padding-right: 0;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+
+  .close-icon {
+    font-size: 2.4rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    &:hover,
+    &:active {
+      & i {
+        transition: all 1.2s;
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .title {
+    color: var(--title-color);
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+}
+
+.desc-content {
+  .sub-title {
+    color: var(--dark-color);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .sub-content {
+    font-size: 1.6rem;
+    padding-left: 18px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .desc-alg-modal-wrap {
+    min-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sort-analysis-item,
+  .sort-note-item__title {
+    font-size: 1.4rem;
+  }
+
+  .desc-alg-modal .title {
+    font-size: 2rem;
+  }
+
+  .desc-content .sub-title {
+    font-size: 1.8rem;
+  }
+
+  .desc-content .sub-content {
+    font-size: 1.5rem;
+  }
+}
